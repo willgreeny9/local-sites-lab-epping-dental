@@ -17,26 +17,11 @@ export default function HomePage() {
         <div className="hero-copy">
           <p className="hero-kicker">NHS &amp; private · Epping High Street</p>
           <h1 id="hero-title">Clear dental care, calm High Street practice.</h1>
-          <p className="lede">
-            Epping Dental is a small team providing quality, affordable NHS and private dental
-            care at {business.address.line1}. Call or email to ask about new-patient
-            availability and the treatment you need.
-          </p>
           <div className="hero-actions">
             <a className="button button-gold" href={`tel:${business.phoneTel}`}>
               Call {business.phoneDisplay}
             </a>
-            <a className="button button-outline" href={`mailto:${business.email}`}>
-              Email the practice
-            </a>
-            <Link className="button button-dark" href="/treatments">
-              Browse treatments
-            </Link>
           </div>
-          <p className="hero-note">
-            NHS books may close from time to time when demand is high. For current prices, visit
-            or call the practice.
-          </p>
         </div>
         <div className="hero-media">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -82,6 +67,24 @@ export default function HomePage() {
               </span>
             </div>
           </Link>
+        </div>
+      </section>
+
+      <section className="section section-muted" aria-labelledby="practice-intro-title">
+        <div className="shell">
+          <div className="section-head">
+            <p className="eyebrow">Practice overview</p>
+            <h2 id="practice-intro-title">NHS and private dental care</h2>
+            <p>
+              Epping Dental is a small team providing quality, affordable NHS and private dental
+              care at {business.address.line1}. Call or email to ask about new-patient availability
+              and the treatment you need.
+            </p>
+            <p>
+              NHS books may close from time to time when demand is high. For current prices, visit
+              or call the practice.
+            </p>
+          </div>
         </div>
       </section>
 
