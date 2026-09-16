@@ -91,7 +91,7 @@ test("ConceptNotice disclosure, sticky bar, dismiss paths, mount-gated open", ()
   assert.doesNotMatch(source, /event\.target === event\.currentTarget/);
   assert.doesNotMatch(source, /Tip:/i);
   assert.doesNotMatch(source, /click outside/i);
-  assert.match(source, /epping-dental-concept-notice-dismissed-v4/);
+  assert.match(source, /epping-dental-concept-notice-dismissed-v5/);
 
   assert.doesNotMatch(source, /useState\(\s*\(\s*\)\s*=>/);
   assert.doesNotMatch(source, /useState\(\s*\(\)\s*=>\s*[\s\S]*localStorage/);
@@ -121,7 +121,7 @@ test("ConceptNotice disclosure, sticky bar, dismiss paths, mount-gated open", ()
 });
 
 test("ConceptNotice dismiss → remount → reopen → dismiss again (storage behaviour)", () => {
-  const storageKey = "epping-dental-concept-notice-dismissed-v4";
+  const storageKey = "epping-dental-concept-notice-dismissed-v5";
   const store = new Map();
   const localStorage = {
     getItem: (k) => (store.has(k) ? store.get(k) : null),
